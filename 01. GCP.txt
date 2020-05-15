@@ -1,0 +1,42 @@
+#The Google Network
+According to some estimates out there publicly,
+Google's network carries as much as 40 percent of the world's Internet traffic every day.
+
+It's designed to give its users the highest possible throughput and the lowest possible latencies for their 
+applications.
+The network interconnects at more than 90 Internet exchanges and more than 100 points of presence worldwide.
+
+When an Internet user sends traffic to a Google resource, Google responds to the user's request
+from an edge network location that will provide the lowest latency.
+Google's Edge-caching network cites content close to end users to minimize latency. 
+
+
+#GCP regions and zones:
+Let's start at the finest grain level, the Zone.
+A zone is a deployment area for Google Cloud Platform Resources.
+For example, when you launch a virtual machine in GCP using Compute Engine, it runs in a zone you specify.
+Although people think of a zone as being like a GCP Data Center, that's not strictly accurate because a zone
+doesn't always correspond to a single physical building.
+You can still visualize the zone that way, though.
+
+Zones are grouped into regions, independent geographic areas, and you can
+choose what regions your GCP resources are in.
+All the zones within a region have fast network connectivity among them.
+Locations within regions usually have round trip network latencies of under 5 milliseconds.
+
+Think of a zone as a single failure domain within a region.
+As part of building a fault tolerant application, you can spread their resources across multiple zones in a region.
+That helps protect against unexpected failures.
+
+You can run resources in different regions too.
+Lots of GCP customers do that, both to bring their applications closer to users around the world,
+and also to protect against the loss of an entire region, say, due to a natural disaster.
+
+A few Google Cloud Platform Services support placing resources in what we call a Multi-Region.
+For example, Google Cloud Storagw lets you place data within the Europe Multi-Region.
+That means, it's stored redundantly in at least two geographic locations,
+separated by at least 160 kilometers within Europe.
+
+As of the time of this video's production,
+GCP had 15 regions.
+Visit cloud.google.com to see what the total is up to today. 
